@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Usuario</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">
+                <img src="/img/splash.png" alt="Logo de MiWeb" class="logo-img">
+            </a>
+            <span id="nombreUsuarioNav" class="user-name">Usuario</span>
+            <br></br>
+            <div class="form-group">
+                <div id="imagenesNav" class="user-images">
+                </div>
+            </div>
+            <br></br><br></br>
+            <a href="index.html">
+                <label class="user-name">Home</label>
+            </a>
+            <br></br>
+            <span class="user-name">Biblioteca</span>
+            <br></br>
+            <span class="user-name">Buscar</span>
+            <br></br>
+            <span class="user-name">Métricas</span>
+            <br></br>
+            <span class="user-name">Notificaciones</span>
+            <br></br>
+            <span class="user-name">Publicar pistas</span>
+        </div>
+        <div class="auth-links">
+            <span class="treslineas-name">≡</span>
+            <br></br>
+            <button id="cerrarSesion" class="btn">Cerrar sesión</button>
+        </div>
+    </nav>
+    <div class="form-container">
+        <h2>Información de Perfil</h2>
+        <div class="form-group">
+            <label for="nombreUsuario">Nombre Usuario</label>
+            <br></br>
+            <p id="nombreUsuario" class="form-data">Nombre del usuario</p>
+        </div>
+
+        <div class="form-group">
+            <label for="emailUsuario">Email</label>
+            <br></br>
+            <p id="emailUsuario" class="form-data">Email del Usuario</p>
+        </div>
+        <div class="form-group">
+            <label for="nombreGrupo">Nombre del grupo</label>
+            <br></br>
+            <p id="nombreGrupo" class="form-data">Nombre del grupo</p>
+        </div>
+        <div class="form-group">
+            <label for="biografiaUsuario">Biografía</label>
+            <br></br>
+            <p id="biografiaUsuario" class="form-data">Biografía del usuario</p>
+        </div>
+
+        <div class="form-group">
+            <label for="redesSocialesContainer">Redes Sociales</label>
+            <br></br>
+            <div id="redesSocialesContainer" class="social-links">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="imagenesContainer">Imagen Perfil:</label>
+            <br></br>
+            <div id="imagenesContainer" class="user-images">
+            </div>
+        </div>
+    </div>
+    <script type="module" src="https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/11.0.1/firebase-auth.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js"></script>
+    <script src="/js/configuracion-firebase.js" type="module"></script>
+    <script src="/js/user.js" type="module"></script>
+    <script src="/js/logout.js" type="module"></script>
+</body>
+</html>
+
+
+
+
+

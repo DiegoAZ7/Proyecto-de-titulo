@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-container">
+        <nav class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="/img/splash.png" alt="Logo de MiWeb" class="logo-img">
+                </a>
+            </div>
+            <div class="auth-links">
+                <a href="login.html" class="btn">Iniciar Sesión</a>
+                <a href="registro.html" class="btn btn-secondary">Registrarse</a>
+            </div>
+        </nav>
+        <!-- Formulario de Registro -->
+        <div class="form-container">
+            <h1>Crear una nueva cuenta</h1>
+            <br>
+            <form id="formulario-crear">
+                <div class="form-group">
+                    <label for="nombreUsuario">Nombre de usuario:</label>
+                    <input type="text" id="nombreUsuario" name="nombreUsuario" placeholder="Tu nombre de usuario" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="Ingresa tu correo" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" placeholder="Crea una contraseña" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombreGrupo">Nombre de grupo:</label>
+                    <input type="text" id="nombreGrupo" name="nombreGrupo" placeholder="Nombre de tu grupo" required>
+                </div>
+                <div class="form-group">
+                    <label for="biografia">Biografía:</label>
+                    <textarea id="biografia" name="biografia" placeholder="Escribe una breve descripción sobre el grupo."></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="redesSociales">Redes sociales:</label>
+                    <input type="text" id="redesSociales" name="redesSociales" placeholder="Instagram, Twitter, etc.">
+                </div>
+                <div class="form-group">
+                    <label for="imagenes">Enlace a imagen de perfil:</label>
+                    <input 
+                        type="text" 
+                        id="imagenes" 
+                        name="imagenes" 
+                        placeholder="Ingresa enlace de imagen"
+                    >
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Registrarse" class="btn">
+                </div>
+            </form>
+            <p>¿Ya tienes cuenta? <a href="login.html">Inicia sesión aquí</a></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 RedWave. Todos los derechos reservados. | Términos y condiciones | Política de privacidad</p>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js" type="module"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js" type="module"></script>
+    <script src="/js/configuracion-firebase.js" type="module"></script>
+    <script src="/js/guardar.js" type="module"></script>
+</body>
+</html>
+

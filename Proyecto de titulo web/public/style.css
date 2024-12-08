@@ -1,0 +1,431 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #333;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+/* Estilo para el título de bienvenida */
+.welcome-title {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.search-bar input {
+    width: 60%;
+    padding: 8px 16px;
+    border: 2px solid #f56262;
+    border-radius: 20px;
+    font-size: 14px;
+    outline: none;
+    margin-right: 5px;
+}
+
+.search-input::placeholder {
+    color: #666;
+}
+.search-bar button {
+    background-color: #f56262;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar button i {
+    font-size: 16px;
+}
+
+.search-button:hover {
+    background-color: #d14e4e;
+}
+
+.search-icon {
+    height: 20px;
+    width: 20px;
+    filter: invert(1); 
+}
+
+
+.page-container {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+}
+.highlight-section {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.highlight-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #f56262;
+}
+
+.category-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.category-buttons .btn {
+    padding: 10px 20px;
+    background-color: red;
+    color: white;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.category-buttons .btn:hover {
+    background-color: #ff4d4d;
+}
+
+.category-buttons .btn-secondary {
+    background-color: black;
+    border: 2px solid red;
+}
+
+.category-buttons .btn-secondary:hover {
+    background-color: red;
+    color: black;
+}
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: red;
+    margin-right: 60px; 
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex: 1;
+}
+
+.nav-links li {
+    margin-left: 20px; 
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: red;
+}
+
+/* Botones de Inicio Sesión y Registro */
+.auth-links {
+    display: flex;
+    gap: 10px;
+    margin-left: auto;
+}
+
+.btn {
+    padding: 8px 16px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #ff4d4d;
+}
+
+.btn-secondary {
+    background-color: black;
+    border: 2px solid red;
+}
+
+.btn-secondary:hover {
+    background-color: red;
+    color: black;
+}
+
+/* Tarjetas */
+.card-section {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+.card {
+    background-color: #1e1e1e;
+    color: white;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    color: #f56262;
+    margin-bottom: 10px;
+}
+
+.card ul {
+    list-style: none;
+    text-align: left;
+    margin: 20px 0;
+    padding: 0;
+}
+
+.card ul li {
+    margin-bottom: 10px;
+}
+
+.card button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f56262;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.card button:hover {
+    background-color: #d14e4e;
+}
+
+/* Pie de página */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* Carrusel */
+.carousel {
+    width: 60%;
+    height: 700px;
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-images img {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.indicator.active {
+    background-color: red;
+}
+
+/* Contenedor del formulario */
+.form-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Encabezado del formulario */
+.form-container h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: red;
+}
+
+/* Estilos para el formulario */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 1rem;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: red;
+}
+
+/* Texto debajo del formulario */
+.form-text {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.form-text a {
+    color: red;
+    text-decoration: none;
+}
+
+.form-text a:hover {
+    text-decoration: underline;
+}
+.logo-img {
+    height: 85px;
+    width: auto;
+    display: block;
+}
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Caja de bienvenida */
+.welcome-box {
+    margin-bottom: 20px;
+}
+
+.welcome-box h1 {
+    font-size: 1.8rem;
+    color: #f56262;
+}
+
+/* Caja de información */
+.info-box {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.info-item {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.info-item label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Redes sociales */
+.social-links a {
+    display: inline-block;
+    color: #f56262;
+    text-decoration: none;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: #d14e4e;
+}
+
+/* Botón de cerrar sesión */
+.btn {
+    padding: 10px 20px;
+    background-color: #f56262;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #d14e4e;
+}
